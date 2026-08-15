@@ -1,5 +1,4 @@
 http://example.com/2026/08/14/test/
-http://example.com/2026/08/14/hello-world/
 http://example.com/
 http://example.com/tags/test/
 http://example.com/categories/Diary/

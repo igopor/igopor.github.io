@@ -4,8 +4,4 @@
     <loc>http://example.com/2026/08/14/test/</loc>
     <lastmod>2026-08-14</lastmod>
   </url>
-  <url>
-    <loc>http://example.com/2026/08/14/hello-world/</loc>
-    <lastmod>2026-08-14</lastmod>
-  </url>
 </urlset> 
