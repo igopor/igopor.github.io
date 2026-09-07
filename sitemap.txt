@@ -1,5 +1,7 @@
-http://example.com/2026/09/07/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/
+http://example.com/2026/08/14/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/
 http://example.com/2026/08/14/test/
 http://example.com/
 http://example.com/tags/test/
+http://example.com/tags/Algorithm/
 http://example.com/categories/Diary/
+http://example.com/categories/learn/
