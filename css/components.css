@@ -1,0 +1,162 @@
+/* ═══════════════════════════════════════════════════
+   components.css — 正文内的可复用组件：表格、代码块
+   （由 markdown 渲染进 .post-article-content）
+═══════════════════════════════════════════════════ */
+
+/* ── 表格 ───────────────────────────────────────── */
+.post-article-content table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+.post-article-content th,
+.post-article-content td {
+  border: 0.5px solid rgba(91, 141, 238, 0.2);
+  padding: 8px 12px;
+  text-align: left;
+}
+.post-article-content th {
+  background: rgba(91, 141, 238, 0.08);
+  color: #1a3a7a;
+  font-weight: 600;
+}
+
+/* ── 代码块 ─────────────────────────────────────── */
+.post-article-content pre {
+  margin: 1.2em 0;
+  overflow: hidden;
+}
+
+.post-article-content pre code {
+  display: block;
+  padding: 10px 18px;
+  font-size: 13px;
+  line-height: 1.65;
+  overflow-x: auto;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+}
+
+.post-article-content :not(pre) > code {
+  background: rgba(91, 141, 238, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #2a5ab5;
+  font-family: 'JetBrains Mono', 'Consolas', monospace;
+}
+
+/* 行号代码块：去掉通用表格边框/内边距，并修正行号栏过宽 */
+.post-article-content figure.highlight {
+  margin: 1.2em 0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 0.5px solid rgba(91, 141, 238, 0.18);
+}
+.post-article-content figure.highlight table,
+.post-article-content figure.highlight th,
+.post-article-content figure.highlight td {
+  border: none;
+  padding: 0;
+}
+.post-article-content figure.highlight pre {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+}
+/* 去掉每行末尾的 <br> 在最后一行造成的多余空行 */
+.post-article-content figure.highlight pre br:last-child {
+  display: none;
+}
+/* 行号列：收缩到内容宽度 */
+.post-article-content figure.highlight .gutter {
+  width: 1%;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  user-select: none;
+  border-right: 1px solid rgba(91, 141, 238, 0.25);
+}
+.post-article-content figure.highlight .gutter pre {
+  padding: 10px 8px 10px 14px;
+  color: #9ab5d5;
+  text-align: right;
+}
+/* 代码列：占满剩余宽度，避免行号栏被撑宽 */
+.post-article-content figure.highlight .code {
+  width: 100%;
+}
+.post-article-content figure.highlight .code pre {
+  padding: 10px 18px;
+  overflow-x: auto;
+}
+
+.hljs-code-lang {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 10px;
+  color: #9ab5d5;
+  font-family: 'Helvetica Neue', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  pointer-events: none;
+}
+
+.post-article-content figure.highlight.has-code-copy,
+.post-article-content pre.has-code-copy {
+  position: relative;
+}
+
+.post-article-content pre.has-code-copy > code,
+.post-article-content figure.highlight.has-code-copy .code pre {
+  padding-right: 88px;
+}
+
+.post-article-content pre.has-code-copy .hljs-code-lang {
+  right: 72px;
+}
+
+.code-copy-button {
+  position: absolute;
+  z-index: 2;
+  top: 8px;
+  right: 8px;
+  padding: 4px 9px;
+  border: 1px solid rgba(91, 141, 238, 0.25);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.88);
+  color: #58729e;
+  font: 12px/1.3 'Helvetica Neue', sans-serif;
+  cursor: pointer;
+  opacity: 0;
+  transition:
+    color 0.18s ease,
+    background 0.18s ease,
+    border-color 0.18s ease,
+    opacity 0.18s ease;
+}
+
+.post-article-content figure.highlight:hover > .code-copy-button,
+.post-article-content pre:hover > .code-copy-button,
+.code-copy-button:focus-visible,
+.code-copy-button.copied {
+  opacity: 1;
+}
+
+.code-copy-button:hover,
+.code-copy-button:focus-visible {
+  color: var(--accent-dark);
+  border-color: rgba(91, 141, 238, 0.5);
+  background: #fff;
+  outline: none;
+}
+
+.code-copy-button.copied {
+  color: #2f855a;
+  border-color: rgba(47, 133, 90, 0.35);
+}
+
+@media (hover: none) {
+  .code-copy-button {
+    opacity: 1;
+  }
+}
