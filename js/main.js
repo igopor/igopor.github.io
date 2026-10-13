@@ -18,9 +18,6 @@
     "cover-05.jpg",
     "cover-06.jpg",
     "cover-07.jpg",
-    "cover-08.jpg",
-    "cover-09.jpg",
-    "cover-10.jpg",
   ];
 
   document
