@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>操作系统进行中 | igopor的个人博客</title>
+
+  
+  <style>
+    :root {
+      --accent:         #5b8dee;
+      --accent-dark:    #3a6bd4;
+      --bg-from:        #c8d8f8;
+      --bg-to:          #e8f0fe;
+      --bg-angle:       135deg;
+      --glass-blur:     16px;
+      --glass-opacity:  0.58;
+      --glass-border:   rgba(255,255,255, 0.8);
+    }
+  </style>
+
+  <link rel="stylesheet" href="/css/style.css">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="igopor的个人博客" type="application/atom+xml">
+</head>
+<body>
+
+
+
+  
+
+<div class="navbar-wrap" id="navbar-wrap">
+  
+  <nav class="navbar-expanded" id="navbar-expanded">
+    <ul class="navbar-links">
+      
+        <li><a href="/"
+               class="">
+          首页
+        </a></li>
+      
+        <li><a href="/about"
+               class="">
+          关于
+        </a></li>
+      
+        <li><a href="/categories"
+               class="">
+          分类
+        </a></li>
+      
+        <li><a href="/tags"
+               class="">
+          标签
+        </a></li>
+      
+    </ul>
+  </nav>
+
+  
+  
+    <div class="navbar-collapsed" id="navbar-collapsed">
+      <span class="navbar-post-title" id="navbar-post-title">操作系统进行中</span>
+      <div class="navbar-progress-bar" id="navbar-progress-bar"></div>
+    </div>
+  
+</div>
+
+
+  <script>
+    window.__IS_POST__ = true;
+    window.__POST_TITLE__ = "操作系统进行中";
+  </script>
+
+
+
+
+
+<main id="main-content">
+  
+
+<div class="post-layout">
+
+  
+  <aside class="post-toc-wrap" id="post-toc-wrap">
+    <div class="glass toc-card">
+      <div class="section-title">目录</div>
+      <nav id="toc" class="toc-nav"></nav>
+    </div>
+  </aside>
+
+  
+  <div class="toc-backdrop" id="toc-backdrop"></div>
+  <button class="toc-fab" id="toc-fab" aria-label="目录" aria-expanded="false">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none"
+         stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <line x1="8" y1="6" x2="20" y2="6"></line>
+      <line x1="8" y1="12" x2="20" y2="12"></line>
+      <line x1="8" y1="18" x2="20" y2="18"></line>
+      <circle cx="3.5" cy="6" r="1"></circle>
+      <circle cx="3.5" cy="12" r="1"></circle>
+      <circle cx="3.5" cy="18" r="1"></circle>
+    </svg>
+  </button>
+
+  
+  <article class="glass post-article" id="post-content">
+
+    
+    
+
+    <div class="post-article-body">
+      <div class="post-article-meta">
+        2026-10-04
+        
+          &nbsp;·&nbsp;
+          
+            <a href="/categories/learn/">learn</a>
+          
+        
+        &nbsp;·&nbsp; 阅读约 18 分钟
+      </div>
+
+      <h1 class="post-article-title">操作系统进行中</h1>
+
+      
+        <div class="post-tags">
+          
+            <a class="tag-pill" href="/tags/Notes/">Notes</a>
+          
+            <a class="tag-pill" href="/tags/Trial/">Trial</a>
+          
+        </div>
+      
+
+      <div class="post-article-content" id="article-body">
+        <p>喜欢记一些笔记，感觉至上。</p>
+<span id="more"></span>
+
+<h2 id="操作系统概述"><a href="#操作系统概述" class="headerlink" title="操作系统概述"></a>操作系统概述</h2><h4 id="什么是操作系统？"><a href="#什么是操作系统？" class="headerlink" title="什么是操作系统？"></a>什么是操作系统？</h4><p>​<strong>操作系统（Operating System，OS</strong>）是指控制和管理整个计算机系统的硬件和软件资源，并合理地组织调度计算机的工作和资源的分配；以提供给用户和其他软件方便的接口和环境；它是计算机系统中最基本的系统软件。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>目标纯粹  <br>必须管理一台计算机</th>
+<th>目标中立  <br>管理计算机硬件就行</th>
+<th>目标混乱  <br>管理什么都行</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>对象纯粹</strong><br>必须服务二进制代码</td>
+<td>Windows&#x2F;Linux&#x2F;vxWorks<br>当然是操作系统</td>
+<td>固件也是操作系统</td>
+<td>gdb（linux环境下的一个调试工具）也是操作系统</td>
+</tr>
+<tr>
+<td><strong>对象中立</strong><br>服务对象是程序就行</td>
+<td>浏览器&#x2F;微信&#x2F;支付宝&#x2F;JVM<br>都是操作系统</td>
+<td>Hadoop也是操作系统</td>
+<td>资源管理器也是操作系统</td>
+</tr>
+<tr>
+<td><strong>对象混乱</strong><br>服务谁都可以</td>
+<td>机箱是操作系统</td>
+<td>机房也可以算操作系统</td>
+<td>校长为什么不是操作系统?</td>
+</tr>
+</tbody></table>
+<p>总之就是最高主管一般的存在，按照这样的定义，很多事情都有ta的主管，故操作系统不严格来说只是一个使得系统功能使用起来更方便的一层虚拟化</p>
+<h4 id="操作系统-学什么"><a href="#操作系统-学什么" class="headerlink" title="操作系统 学什么"></a>操作系统 学什么</h4><p>我们不重点讨论为什么要有操作系统，因为这很显然。<strong>“如何实现”</strong> 是操作系统的最关键问题。<br>操作系统的三个重点：<strong>并发、共享、虚拟</strong></p>
+<h3 id="实践环节"><a href="#实践环节" class="headerlink" title="实践环节"></a>实践环节</h3><h4 id="提前下载"><a href="#提前下载" class="headerlink" title="提前下载"></a>提前下载</h4><ol>
+<li>ubuntu-22.04.5-desktop-amd64.iso<br>（ <a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/22.04/">Index of &#x2F;ubuntu-releases&#x2F;22.04&#x2F; | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror</a> 清华大学镜像）</li>
+<li>VMware<br>（呃？官网？）</li>
+</ol>
+<h4 id="创建新虚拟机"><a href="#创建新虚拟机" class="headerlink" title="创建新虚拟机"></a>创建新虚拟机</h4><p>选择<strong>典型</strong> ，虚拟机名称<code>OS‑Ubuntu2204</code>,位置<code>D:\Virtual Machine\Virtual Machines\OS-Ubuntu2204</code><br>用户名 <code>os</code> ,密码 <code>123456</code>（顺手创建普通账户，root账号是内置的）</p>
+<h4 id="安装必备工具"><a href="#安装必备工具" class="headerlink" title="安装必备工具"></a>安装必备工具</h4><p><code>sudo</code>：以管理员权限执行；<code>apt install</code>：Ubuntu 包管理器安装软件；<code>-y</code>：所有确认提问自动选 yes，无需手动回车。<br>注意：<strong>反斜杠后面必须接回车而不能是空格</strong>，。放在一行末尾的反斜杠 <code>\</code>，含义：告诉 Shell：本行命令还没结束，下一行是同一命令的延续。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install -y gcc make git gdb tmux vim fish man-db tldr build-essential \</span><br><span class="line">valgrind nasm qemu-system-x86 flex bison libssl-dev</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>gcc / build‑essential</code>：C 语言编译链</li>
+<li><code>make</code>：GNU Make 工程构建工具</li>
+<li><code>git</code>：版本控制</li>
+<li><code>gdb</code>：源码 &#x2F; 汇编调试器</li>
+<li><code>tmux</code>：终端多窗口管理</li>
+<li><code>vim</code>：命令行编辑器</li>
+<li><code>fish</code>：现代 Shell（课程演示使用）</li>
+<li><code>man / tldr</code>：帮助文档工具</li>
+<li><code>qemu-system-x86</code>：后续操作系统内核仿真实验</li>
+<li><code>nasm</code>：汇编编译工具</li>
+</ul>
+<h4 id="验证开发环境"><a href="#验证开发环境" class="headerlink" title="验证开发环境"></a>验证开发环境</h4><p>先确认 gcc 是否安装成功</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc --version</span><br></pre></td></tr></table></figure>
+
+<p>新建 C 语言源代码文件 test.c<br>echo接单引号是原样输出，接双引号会保留空格 但解析变量$（环境变量&#x2F;shell本地变量）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">echo &#x27;#include &lt;stdio.h&gt;</span><br><span class="line">int main()&#123;</span><br><span class="line">    printf(&quot;OS Environment Ready!\n&quot;);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;&#x27; &gt; test.c</span><br></pre></td></tr></table></figure>
+
+<p>看文件是否生成</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls</span><br></pre></td></tr></table></figure>
+
+<p>使用 gcc 编译源码，生成可执行程序<br><code>-o test</code>：<code>-o</code> 是 gcc 的选项，<strong>指定输出可执行文件名字叫 <code>test</code></strong><br>如果不写 <code>-o test</code>，默认生成的可执行文件名字叫 <code>a.out</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc test.c -o test</span><br></pre></td></tr></table></figure>
+
+<p>再次 ls 看文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls</span><br></pre></td></tr></table></figure>
+
+<p>运行程序<br><code>./</code> 代表当前目录</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./test</span><br></pre></td></tr></table></figure>
+
+<p>清理测试文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm test test.c</span><br></pre></td></tr></table></figure>
+
+<h4 id="实验：实现-pstree-打印进程之间的树状的父子关系"><a href="#实验：实现-pstree-打印进程之间的树状的父子关系" class="headerlink" title="实验：实现 pstree 打印进程之间的树状的父子关系"></a>实验：实现 <code>pstree</code> 打印进程之间的树状的父子关系</h4><h5 id="了解pstree命令"><a href="#了解pstree命令" class="headerlink" title="了解pstree命令"></a>了解pstree命令</h5><p>pstree是Ubuntu默认安装的程序，用于<strong>读取 Linux 内核里保存的全部进程信息，然后以树形排版打印在终端</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-p</code></td>
+<td>显示 PID，<strong>最常用</strong></td>
+</tr>
+<tr>
+<td><code>-u</code></td>
+<td>显示进程所属用户名</td>
+</tr>
+<tr>
+<td><code>-a</code></td>
+<td>显示进程完整启动命令</td>
+</tr>
+<tr>
+<td><code>-h</code></td>
+<td>高亮你当前所在的这条进程链</td>
+</tr>
+<tr>
+<td><code>-n</code></td>
+<td>按 PID 数字从小到大排序（默认按名字）</td>
+</tr>
+<tr>
+<td><code>-c</code></td>
+<td>强制展开，不合并多个同名子进程</td>
+</tr>
+</tbody></table>
+<h5 id="实验要求"><a href="#实验要求" class="headerlink" title="实验要求"></a>实验要求</h5><p>复刻pstree，写一个能把系统中的进程按照父亲-孩子的树状结构打印到终端的程序，同时需要保证这三个可选项。</p>
+<ul>
+<li><code>-p</code>, <code>--show-pids</code>: 打印每个进程的进程号。</li>
+<li><code>-n</code> <code>--numeric-sort</code>: 按照pid的数值从小到大顺序输出一个进程的直接孩子。</li>
+<li><code>-V</code> <code>--version</code>: 打印版本信息。</li>
+</ul>
+<h5 id="我遇到的问题"><a href="#我遇到的问题" class="headerlink" title="我遇到的问题"></a>我遇到的问题</h5><p><strong>读取命令行参数</strong>：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">char</span> *argv[])</span> </span><br></pre></td></tr></table></figure>
+
+<p>最初学习c语言就见过的main函数的奇怪参数，派上了用场！<br>argc是数值，代表参数列表的数量，默认为1<br>argv是参数列表，其中<code>argv[0]</code> 是程序名，从1~argc-1都是参数，<code>argv[argc]</code>是NULL</p>
+<p><strong>遍历目录</strong> ：<br>我们首先需要头文件</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;dirent.h&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p><strong>DIR</strong><br>DIR是一个目录流句柄，库内部不透明结构体，维护你当前读到哪个目录、底层fd、内部缓冲区，不能自己访问其成员，将该指针传给库函数来使用</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">DIR *dir = opendir(<span class="string">&quot;/some/path&quot;</span>);</span><br><span class="line"></span><br><span class="line">closedir(dir);</span><br></pre></td></tr></table></figure>
+
+<p>成功就会返回一个DIR *，用于后续读取目录；失败则会返回NULL<br><strong>struct dirent</strong><br>struct dirent 表示目录中的一个条目，如果调用<code>readdir(DIR*)</code>，就会返回指向<code> struct dirent</code> 的指针。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">dirent</span> *<span class="title">entry</span>;</span></span><br><span class="line"><span class="keyword">while</span> ((entry = readdir(dir)) != <span class="literal">NULL</span>) &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%s\n&quot;</span>, entry-&gt;d_name);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>entry的主要字段（linux）</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">dirent</span> &#123;</span></span><br><span class="line">    <span class="type">ino_t</span>          d_ino;       <span class="comment">/* inode号 */</span></span><br><span class="line">    <span class="type">off_t</span>          d_off;       <span class="comment">/* 在目录流中的偏移 */</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">short</span> d_reclen;    <span class="comment">/* 当前这条记录的字节长度 */</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">char</span>  d_type;      <span class="comment">/* 文件类型：普通文件/目录/链接等 */</span></span><br><span class="line">    <span class="type">char</span>           d_name[<span class="number">256</span>]; <span class="comment">/* 文件名！最重要字段 */</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>格式化字符串</strong>：<br>古早的sprintf已经被现代的snprintf代替！</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">snprintf</span><span class="params">(<span class="type">char</span> *str, <span class="type">size_t</span> size, <span class="type">const</span> <span class="type">char</span> *format, ...)</span>;</span><br><span class="line"><span class="comment">//示例：</span></span><br><span class="line"><span class="built_in">snprintf</span>(path,<span class="keyword">sizeof</span>(path),<span class="string">&quot;/proc/%d/stat&quot;</span>,pid);</span><br></pre></td></tr></table></figure>
+
+<p>str：格式化后的字符串保存于str<br>size：缓冲区总字节大小（包含‘\0’）<br>format：格式化的字符串，后面是参数</p>
+<p><strong>关于stdout和stderr</strong>：<br>stdout是标准输出，而stderr是标准错误。标准输出可以被管道传递给下一个程序，而标准错误只能给人看 不会被管道吃掉。</p>
+<h2 id="多处理器编程"><a href="#多处理器编程" class="headerlink" title="多处理器编程"></a>多处理器编程</h2><p>现代多处理器编程难到爆炸！属于比较热门的研究方向。为什么难？</p>
+<ol>
+<li><strong>内存可见性</strong>：每个CPU都有几级缓存，修改的内容不一定立刻写回主存</li>
+<li><strong>竞态条件</strong>：一条高级语言语句会被翻译成多条机器指令，两个cpu并行执行就会发生数据竞争，但又不是每次都会竞争</li>
+<li><strong>锁带来的问题</strong>：死锁、活锁、优先级翻转、粒度权衡、锁竞争</li>
+<li><strong>编译器+cpu双重重排序</strong>：编译器优化会调整指令顺序，而cpu硬件会调换访存顺序 为了最大化吞吐</li>
+<li>……..</li>
+</ol>
+<p>所以，我们接下来下处理多处理器编程，做了非常大的简化，我们的默认假设是：<br><strong>指令是原子的</strong>（一条机器指令要么做完 要么没做 不会有中间状态）<br><strong>内存是全局一致的</strong><br>在这个理想换模型下，并发问题来源就变为：<strong>线程执行可以在任意两条指令之间被操作系统时间片打断</strong></p>
+
+      </div>
+
+      
+      <div class="post-nav">
+        <div></div>
+        
+          <a class="glass post-nav-btn" href="/2026/09/07/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/">
+            <span class="post-nav-label">下一篇 →</span>
+            <span class="post-nav-title">一个很乱的板子</span>
+          </a>
+        
+      </div>
+    </div>
+
+  </article>
+</div>
+
+</main>
+
+
+<footer class="site-footer">
+  <p></p>
+</footer>
+
+<script src="/js/main.js"></script>
+<script src="/js/navbar.js"></script>
+<script>hljs.highlightAll();</script>
+</body>
+</html>

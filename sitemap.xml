@@ -2,9 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://igopor.github.io/2026/08/14/%E8%AE%A1%E7%BD%91%E5%A4%8D%E4%B9%A0/</loc>
+    
+    <lastmod>2026-10-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://igopor.github.io/2026/10/04/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/</loc>
+    
+    <lastmod>2026-10-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://igopor.github.io/2026/08/14/c++%E5%A4%8D%E4%B9%A0/</loc>
+    
+    <lastmod>2026-10-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://igopor.github.io/2026/08/14/test/</loc>
     
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -37,6 +64,13 @@
   
   <url>
     <loc>https://igopor.github.io/tags/Exam/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://igopor.github.io/tags/Trial/</loc>
     <lastmod>2026-10-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
